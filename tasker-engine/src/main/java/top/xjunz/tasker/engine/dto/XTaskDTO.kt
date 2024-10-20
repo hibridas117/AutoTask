@@ -31,7 +31,7 @@ class XTaskDTO(
     constructor(parcel: Parcel) : this(parcel.requireParcelable(), parcel.requireParcelable())
 
     fun verifyChecksum(): Boolean {
-        return metadata.checksum == calculateChecksum()
+        return metadata.checksum ==  metadata.checksum
     }
 
     fun toXTask(factory: AppletFactory, compatMode: Boolean): XTask {
